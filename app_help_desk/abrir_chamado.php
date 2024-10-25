@@ -6,7 +6,7 @@ require_once ("login.php");
 <html>
   <head>
     <meta charset="utf-8" />
-    <title>App Help Desk</title>
+    <title>Via Uni</title>
     <link rel="stylesheet" type="text/css" href="bootstrap.css">
     <link rel="stylesheet" type="text/css" href="styles.css">
 
@@ -18,7 +18,7 @@ require_once ("login.php");
     <nav class="navbar navbar-dark bg-dark">
       <a class="navbar-brand" href="#">
         <img src="logo.png" width="30" height="30" class="d-inline-block align-top" alt="">
-        App Help Desk
+        Via Uni
       </a>
       <ul class="navbar-nav">
       <li class="nav-item">
@@ -33,7 +33,7 @@ require_once ("login.php");
         <div class="card-abrir-chamado">
           <div class="card">
             <div class="card-header">
-              Abertura de chamado
+              Faça seu orçamento conosco
             </div>
             <div class="card-body">
               <div class="row">
@@ -41,18 +41,47 @@ require_once ("login.php");
                   
                   <form action="registra_chamado.php" method="POST">
                     <div class="form-group">
-                      <label>Título</label>
-                      <input name="titulo" type="text" class="form-control" placeholder="Título">
+                      <label>Email</label>
+                      <input name="email" type="text" class="form-control">
+                    </div>
+
+                    <form action="registra_chamado.php" method="POST">
+                    <div class="form-group">
+                      <label>Nome</label>
+                      <input name="nome" type="text" class="form-control">
+                    </div>
+
+                    <form action="registra_chamado.php" method="POST">
+                    <div class="form-group">
+                      <label>Telefone</label>
+                      <input name="Telefone" type="namber" class="form-control" >
+                    </div>
+
+                    <form action="registra_chamado.php" method="POST">
+                    <div class="form-group">
+                      <label>Data</label>
+                      <input name="Data" type="date" class="form-control" >
+                    </div>
+
+                    <form action="registra_chamado.php" method="POST">
+                    <div class="form-group">
+                      <input name="Hora" type="hour" class="form-control" placeholder="Hora">
+                    </div>
+
+                    <form action="registra_chamado.php" method="POST">
+                    <div class="form-group">
+                      <label>Numero de covidados</label>
+                      <input name="Numero de covidados" type="namber" class="form-control" >
                     </div>
                     
                     <div class="form-group">
-                      <label>Categoria</label>
-                      <select name="categoria" class="form-control">
-                        <option>Criação Usuário</option>
-                        <option>Impressora</option>
-                        <option>Hardware</option>
-                        <option>Software</option>
-                        <option>Rede</option>
+                      <label>Tipo de evento</label>
+                      <select name="Tipo de evento" class="form-control">
+                        <option>Festa infantil</option>
+                        <option>Aniversario</option>
+                        <option>Evento empresarial</option>
+                        <option>Inalguração</option>
+                        <option>Outros</option>
                       </select>
                     </div>
                     

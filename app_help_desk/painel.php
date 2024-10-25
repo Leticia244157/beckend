@@ -7,7 +7,7 @@ require_once ("login.php");
 <html>
   <head>
     <meta charset="utf-8" />
-    <title>App Help Desk</title>
+    <title>Via Uni</title>
     <link rel="stylesheet" type="text/css" href="bootstrap.css">
     <link rel="stylesheet" type="text/css" href="styles.css">
     
@@ -19,7 +19,7 @@ require_once ("login.php");
     <nav class="navbar navbar-dark bg-dark">
       <a class="navbar-brand" href="#">
         <img src="logo.png" width="30" height="30" class="d-inline-block align-top" alt="">
-        App Help Desk
+        Via Uni
       </a>
     <ul class="navbar-nav">
       <li class="nav-item">

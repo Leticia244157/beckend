@@ -5,25 +5,25 @@
 // echo "</pre>";
 // echo "<hr>";
 
-$titulo = str_replace('#','-',$_POST['titulo']);
-// $titulo = $_POST['titulo'];
+// $titulo = str_replace('#','-',$_POST['titulo']);
+// // $titulo = $_POST['titulo'];
 
-$categoria = str_replace('#','-',$_POST['categoria']);
-// $categoria = $_POST['categoria'];
+// $categoria = str_replace('#','-',$_POST['categoria']);
+// // $categoria = $_POST['categoria'];
 
-$descricao = str_replace('#','-',$_POST['descricao']);
-// $descricao = $_POST['descricao'];
+// $descricao = str_replace('#','-',$_POST['descricao']);
+// // $descricao = $_POST['descricao'];
 
-$texto = $titulo.'#'.$categoria.'#'.$descricao.PHP_EOL;
+// $texto = $titulo.'#'.$categoria.'#'.$descricao.PHP_EOL;
 
-echo $texto;
+// echo $texto;
 
-$arquivo = fopen('../../app_help_desk/registro.txt', 'a');
+// $arquivo = fopen('../../app_help_desk/registro.txt', 'a');
 
-fwrite($arquivo,$texto);
+// fwrite($arquivo,$texto);
 
-fclose($arquivo);
+// fclose($arquivo);
 
-header ('Location: consultar_chamado.php');
+header ('Location: painel.php');
 
 ?>

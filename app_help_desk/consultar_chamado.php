@@ -1,29 +1,17 @@
 <?php
-require_once ("login.php");
+  session_start();
+  // echo $_SESSION['autenticado'];
+  if (!isset($_SESSION['autenticado']) || $_SESSION['autenticado'] != 'SIM'){
+    header ('Location: index.php?login=erro2');
+  }
+
 ?>
 
-<?php
-$chamados = [];
-
-$arquivo = fopen('../../app_help_desk/registro.txt','r');
-
-//feof END OF FILE
-while(!feof($arquivo)){
-//fgets($arquivo)
-$registro = fgets($arquivo);
-$chamados [] = $registro;
-}
-
-fclose ($arquivo);
-
-// echo '<pre>';
-// print_r ($chamados);
-// echo '</pre>';
-?>
 <html>
   <head>
     <meta charset="utf-8" />
-    <title>App Help Desk</title>
+    <title>Via Uni</title>
+
     <link rel="stylesheet" type="text/css" href="bootstrap.css">
     <link rel="stylesheet" type="text/css" href="styles.css">
 
@@ -35,13 +23,8 @@ fclose ($arquivo);
     <nav class="navbar navbar-dark bg-dark">
       <a class="navbar-brand" href="#">
         <img src="logo.png" width="30" height="30" class="d-inline-block align-top" alt="">
-        App Help Desk
+        Via Uni
       </a>
-      <ul class="navbar-nav">
-      <li class="nav-item">
-        <button onclick="location.href='logoff.php'" class="botao-sair" type="button"> SAIR </button>
-      </li>
-    </ul>
     </nav>
 
     <div class="container">    
@@ -50,39 +33,52 @@ fclose ($arquivo);
         <div class="card-consultar-chamado">
           <div class="card">
             <div class="card-header">
-              Consulta de chamado
+              Sobre os salões
             </div>
-            
+           
             <div class="card-body">
-            <?php
-            
-            foreach($chamados as $chamado){
-            
-            //explode ('#',$chamado);
-            $chamados_dados = explode('#',$chamado);
-            
-            if(count ($chamados_dados) < 3){
-              continue;
-            }
-            
-            // echo '<pre>';
-            // print_r ($chamados_dados);
-            // echo '</pre>';
-            // ?>
+             
               <div class="card mb-3 bg-light">
                 <div class="card-body">
-                  <h5 class="card-title"><?php echo $chamados_dados[0]; ?></h5>
-                  <h6 class="card-subtitle mb-2 text-muted"><?php echo $chamados_dados[1]; ?></h6>
-                  <p class="card-text"><?php echo $chamados_dados[2]; ?></p>
+                  <h5 class="card-title">Salão Principal</h5>
+                  <h6 class="card-subtitle mb-2 text-muted">
+                    Preços <br>
+                    Segunda a Quinta R$8700.00<br>
+                    Sexta a Domingo e Freriados R$10300.00 <br>
+                  </h6>
+                  
 
                 </div>
               </div>
-              <?php } ?>
-              <div class="row mt-5">
-                <div class="col-6">
-                <a class="btn btn-lg btn-warning btn-block" href="painel.php">Voltar</a>
+
+              <div class="card mb-3 bg-light">
+                <div class="card-body">
+                  <h5 class="card-title">Salão Infantil</h5>
+                  <h6 class="card-subtitle mb-2 text-muted">
+                    Preços <br>
+                    Segunda a Quinta R$3500.00 <br>
+                    Sexta a Domingo e Freriados R$5200.00 <br></h6>
+                  
                 </div>
               </div>
+
+              <div class="card mb-3 bg-light">
+                <div class="card-body">
+                  <h5 class="card-title">Salão Infantil e Parque</h5>
+                  <h6 class="card-subtitle mb-2 text-muted">
+                  Preços <br>
+                    Segunda a Quinta R$6100.00 <br>
+                    Sexta a Domingo e Freriados R$7000.00<br>
+                  </h6>
+                  
+
+                </div>
+              </div>
+
+              <div class="row mt-5">
+                      <div class="col-6">
+                      <a class="btn btn-lg btn-warning btn-block" href="painel.php">Voltar</a>
+                      </div>
             </div>
           </div>
         </div>
