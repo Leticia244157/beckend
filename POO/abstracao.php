@@ -4,7 +4,7 @@
 class Funcionario{
 
     //Atributos -> Caracteristicas    
-    public $nome = 'Ingrid';
+    public $nome = 'Leticia';
     public $telefone = '(15)99747-3369';
     public $numFilhos = 2;
 
@@ -37,7 +37,7 @@ echo $y->resumirCadFunc(); // Exibe o resumo com o número de filhos atualizado
 echo '<hr>';
 
 $x = new Funcionario();
-$x->modificarNome('Letícia');
+$x->modificarNome('Ingrid');
 echo $x->resumirCadFunc();
 echo '<hr>';
 ?>
